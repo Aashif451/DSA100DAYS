@@ -4,9 +4,9 @@ public class FindStringDiff {
 	
 	String chars="aabbc";
 	
-	 int[] charCount = new int[26];
-    for (char ch : chars.toCharArray()) {
-        charCount[ch - 'a']++;
-    }
+//	 int[] charCount = new int
+//    for (char ch : chars.toCharArray()) {
+//        charCount[ch - 'a']++;
+//    }
 
 }
