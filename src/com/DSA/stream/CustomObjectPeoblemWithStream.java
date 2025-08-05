@@ -9,21 +9,21 @@ import java.util.stream.Collectors;
 public class CustomObjectPeoblemWithStream {
 	public static void main(String[] args) {
 		
-		List<Employee>  empList=List.of(
-				new Employee(101,10000d,"john","IT",30),
-				new Employee(102,12000d,"Saleem","DEV",20),
-				new Employee(103,80000d,"Rizwan","IT",25),
-				new Employee(104,35000d,"Gulshan","R&D",45),
-				new Employee(105,45000d,"Aashif","DEV",25)
-				);
-		
-//		Find the student with the highest score from a list of Student objects using streams.
-		empList.stream().max(Comparator.comparingDouble(Employee::getSalary)).ifPresent(e->System.out.println(e.getName()));
-		
-	 List<String> collect = empList.stream().filter(emp->emp.getDepartment().equalsIgnoreCase("IT")).
-		map(Employee::getName).collect(Collectors.toList());
-	 
-	 collect.stream().forEach(s->System.out.println(s));
+//		List<Employee>  empList=List.of(
+//				new Employee(101,10000d,"john","IT",30),
+//				new Employee(102,12000d,"Saleem","DEV",20),
+//				new Employee(103,80000d,"Rizwan","IT",25),
+//				new Employee(104,35000d,"Gulshan","R&D",45),
+//				new Employee(105,45000d,"Aashif","DEV",25)
+//				);
+//		
+////		Find the student with the highest score from a list of Student objects using streams.
+//		empList.stream().max(Comparator.comparingDouble(Employee::getSalary)).ifPresent(e->System.out.println(e.getName()));
+//		
+//	 List<String> collect = empList.stream().filter(emp->emp.getDepartment().equalsIgnoreCase("IT")).
+//		map(Employee::getName).collect(Collectors.toList());
+//	 
+//	 collect.stream().forEach(s->System.out.println(s));
 		
 	}
 	

@@ -71,25 +71,35 @@ public class MainClass {
 		
 		
 		System.out.println("hi this frequency");
-		Map<Character, Long> collect = Arrays.stream(str.split(" ")).flatMap(word->word.chars().mapToObj(c->(char) c)).map(Character::toUpperCase).
-		collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		Map<Character, Long> collect = Arrays.stream(str.split(" "))
+				.flatMap(word->word.chars()
+						.mapToObj(c->(char) c))
+				.map(Character::toUpperCase).
+		collect(Collectors
+				.groupingBy(Function
+						.identity(),Collectors
+						.counting()));
 		
 		collect.entrySet().forEach(n->System.out.println(n.getKey() + "    :"+n.getValue()));
 		
 		
 		String strfreq="Aashif";
 		
-		Map<Character, Long> collect2 = strfreq.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		Map<Character, Long> collect2 = strfreq.chars().mapToObj(c->(char)c)
+				.collect(Collectors.groupingBy(Function
+						.identity(),Collectors.counting()));
 		
 		collect2.entrySet().forEach(n->System.out.println(n.getKey() + "    :"+n.getValue()));
 		
 		
-		Map<String, Long> collect3 = Arrays.stream(str.split(" ")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		Map<String, Long> collect3 = Arrays.stream(str.split(" "))
+				.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		
 		collect3.entrySet().forEach(n->System.out.println(n.getKey() + "    :"+n.getValue()));
 		System.out.println("hi this find the vowels");
 		String strVowels="Aashif";
-		List<Character> collect4 = strVowels.chars().mapToObj(c->(char)c).filter(c->"AEIOUaeiou".indexOf(c)!=-1).collect(Collectors.toList());
+		List<Character> collect4 = strVowels.chars()
+				.mapToObj(c->(char)c).filter(c->"AEIOUaeiou".indexOf(c)!=-1).collect(Collectors.toList());
 		
 		collect4.forEach(System.out::println);
 		

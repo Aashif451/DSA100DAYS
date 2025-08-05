@@ -5,8 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ZerosToEnd {
-	
-	
+
 //	first approach
 //	public static  int[] moveZerosToEnd(int arr[]) {
 //		
@@ -36,51 +35,60 @@ public class ZerosToEnd {
 //		return arr;
 //		
 //	}
-	
-	
-public static  int[] moveZerosToEnd(int arr[]) {
-	
-		int len=arr.length;
-		int zero=-1;
+
+	public static int[] moveZerosToEnd(int arr[]) {
+
+		int len = arr.length;
+//		int zero = -1;
+//
+//		for (int i = 0; i < len; i++) {
+//			if (arr[i] == 0) {
+//
+//				zero = i;
+//				break;
+//
+//			}
+//		}
+//
+//		for (int i = zero + 1; i < len; i++) {
+//
+//			if (arr[i] != 0) {
+//				swap(arr, zero, i);
+//				zero++;
+//
+//			}
+//		}
 		
-        for (int i=0; i<len; i++) {
-			if (arr[i]==0) {
-				
-				zero=i;
-				break;
-				
-			}
-		}
-	
-		for (int i=zero+1; i<len; i++) {
+		int count =0;
+		
+		for (int i=0; i<len; i++) {
 			
 			if (arr[i]!=0) {
-				swap(arr,zero,i);
-				zero++;
+				arr[count]=arr[i];
+				count++;
+				arr[i]=0;
 				
 			}
+			
 		}
-		
+
 		return arr;
+
+	}
+
+	private static void swap(int[] arr, int i, int j) {
+
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+
+	}
+	
+	public static void main(String[] args) {
+		int [] arr= {0,0,0,3,12,0,3,4,4,50,0,8,0,7};
+		int[] moveZerosToEnd = ZerosToEnd.moveZerosToEnd(arr);
+Arrays.stream(moveZerosToEnd).forEach(System.out::println);
 		
 	}
 
-private static void swap(int [] arr,int i, int j) {
-	
-	int temp=arr[i];
-	arr[i]=arr[j];
-	arr[j]=temp;
-	
-	
-	
 }
-
-}
-
-
-
-
-
-
-
-

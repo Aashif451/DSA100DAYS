@@ -6,7 +6,7 @@ public class MejorityElement {
 	
 	static int getMajorityElement(int arr[]) {
 		
-//		arr=[2,3,4,3,2,3,4,3,4,3,3,3,]
+//		arr=[2,3,4,3,2,3,4,3,4,3,3,3,3]
 		
 		int len=arr.length;
 		int maxElement=0;

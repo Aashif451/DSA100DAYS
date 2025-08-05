@@ -11,6 +11,13 @@ public class LeadersInArray {
 	
 //	65 45 35 32
 	
+	public static void main(String[] args) {
+		int arr []={10,34,54,2,54,65,45,10,15, 5 ,35,32};
+		List<Integer> leaderElement = getLeaderElement(arr);
+		leaderElement.stream().forEach(System.out::print);
+		
+	}
+	
 	public static List<Integer> getLeaderElement(int arr[]) {
 		
 		
